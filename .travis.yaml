@@ -1,6 +1,5 @@
 language: go
 
-language: go
 go:
 - "1.7"
 - "1.8"
@@ -12,3 +11,4 @@ go:
 - "tip"
 
 script: go test
+
