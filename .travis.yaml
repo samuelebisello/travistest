@@ -5,6 +5,8 @@ go:
 - "1.10.x"
 - "1.9.x"
 - master
-
+env:
+  global:
+  - GO111MODULE=on
 script:
   - go test
