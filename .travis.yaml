@@ -1,27 +1,3 @@
 language: go
-
-sudo: required
-dist: trusty
-
-notifications:
-  email: false
-
-env:
-- GO111MODULE=on
-
 go:
-- 1.11.x
-- master
-- tip
-
-matrix:
-  fast_finish: true
-  allow_failures:
-  - go: master
-  - go: tip
-
-cache: apt
-
-
-script:
-- go test ./
+- "1.x"
