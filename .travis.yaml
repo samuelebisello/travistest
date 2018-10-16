@@ -1,12 +1,27 @@
-sudo: false
 language: go
-go:
-- "1.11.x"
-- "1.10.x"
-- "1.9.x"
-- master
+
+sudo: required
+dist: trusty
+
+notifications:
+  email: false
+
 env:
-  global:
-  - GO111MODULE=on
+- GO111MODULE=on
+
+go:
+- 1.11.x
+- master
+- tip
+
+matrix:
+  fast_finish: true
+  allow_failures:
+  - go: master
+  - go: tip
+
+cache: apt
+
+
 script:
-  - go test
+- go test ./
