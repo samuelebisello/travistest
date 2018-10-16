@@ -1,15 +1,7 @@
-language: c
+language: go
+go:
+- "1.11.x"
+script: go test
 
-os:
-- linux
-- osx
 
-dist: trusty
-sudo: false
 
-install:
-- eval "$(curl -sL https://raw.githubusercontent.com/travis-ci/gimme/master/gimme | GIMME_GO_VERSION=master bash)"
-
-script:
-- go build
-- go test
